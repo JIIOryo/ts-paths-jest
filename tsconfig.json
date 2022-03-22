@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "es2020"
+    ],
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "strict": true,
+    "sourceMap": true,
+    "allowJs": false,
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "types": [
+      "node",
+      "jest"
+    ],
+    "paths": {
+      "@X/*": ["./x/*"],
+      "@A/*": ["./a/*"],
+      "@C/*": ["./a/b/c/*"],
+      "@Test/*": ["../test/*"]
+    }
+  },
+  "include": [
+    "./src/**/*",
+    "./test/**/*"
+  ],
+  "exclude": [
+    "./dist/",
+    "./node_modules/"
+  ]
+}
