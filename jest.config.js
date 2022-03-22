@@ -11,7 +11,8 @@ module.exports = {
   transform: {
     '^.+\\.ts$': 'ts-jest',
   },
+  // 方法1:
   // moduleNameMapper: { '^@C/(.*)$': '<rootDir>/a/b/c/$1', }
-  // jsoncが使えないのシビーな
+  // 方法2: 楽だけど、jsoncが使えないのシビーな。tsconfigそのままparseする
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/src/' }),
 };
